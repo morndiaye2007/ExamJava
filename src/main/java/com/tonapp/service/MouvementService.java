@@ -32,4 +32,11 @@ public class MouvementService {
     public List<Mouvement> filtrer(Long employeId, LocalDate date, TypeMouvement type) {
         return mouvementDao.filtrer(employeId, date, type);
     }
+    
+    public boolean estEmployePresent(Long employeId) {
+        Employe employe = employeDao.trouverParId(employeId);
+        if (employe == null) return false;
+        Mouvement dernier = mouvementDao.dernierMouvement(employe);
+        return dernier != null && dernier.getType() == TypeMouvement.ENTREE;
+    }
 } 

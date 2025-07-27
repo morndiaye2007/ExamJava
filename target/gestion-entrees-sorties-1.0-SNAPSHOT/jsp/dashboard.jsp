@@ -113,9 +113,9 @@
         </div>
         
         <div class="nav-menu">
-            <a href="${pageContext.request.contextPath}/employes/lister" class="nav-button">Gestion Employés</a>
-            <a href="${pageContext.request.contextPath}/mouvements/entree" class="nav-button">Enregistrer Mouvement</a>
-            <a href="${pageContext.request.contextPath}/mouvements/lister" class="nav-button">Historique Mouvements</a>
+            <a href="${pageContext.request.contextPath}/employes/lister" class="nav-button">👥 Gestion Employés</a>
+            <a href="${pageContext.request.contextPath}/mouvements/gestion" class="nav-button">🚪 Gestion Mouvements</a>
+            <a href="${pageContext.request.contextPath}/mouvements/lister" class="nav-button">📋 Historique Mouvements</a>
         </div>
     </div>
 </body>
