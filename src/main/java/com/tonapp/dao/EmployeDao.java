@@ -90,4 +90,31 @@ public class EmployeDao {
             em.close();
         }
     }
+    
+    public String genererMatricule() {
+        EntityManager em = getEntityManager();
+        try {
+            // Trouver le plus grand matricule existant
+            String result = em.createQuery("SELECT MAX(e.matricule) FROM Employe e", String.class)
+                             .getSingleResult();
+            
+            if (result == null) {
+                // Aucun employé existant, commencer par EMP001
+                return "EMP001";
+            }
+            
+            // Extraire le numéro du matricule (ex: EMP001 -> 1)
+            String numeroStr = result.substring(3); // Enlever "EMP"
+            int numero = Integer.parseInt(numeroStr);
+            
+            // Incrémenter et formater avec des zéros
+            numero++;
+            return String.format("EMP%03d", numero);
+        } catch (Exception e) {
+            // En cas d'erreur, retourner un matricule par défaut
+            return "EMP001";
+        } finally {
+            em.close();
+        }
+    }
 } 

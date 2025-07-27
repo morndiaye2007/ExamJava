@@ -49,8 +49,9 @@
                 </div>
                 
                 <div class="form-group">
-                    <label for="matricule">Matricule <span class="required">*</span></label>
-                    <input type="text" id="matricule" name="matricule" value="${employe.matricule}" required>
+                    <label for="matricule">Matricule</label>
+                    <input type="text" id="matricule" name="matricule" value="${employe.matricule}" readonly style="background-color: #f8f9fa; color: #6c757d;">
+                    <small style="color: #6c757d; font-size: 12px;">Le matricule ne peut pas être modifié</small>
                 </div>
                 
                 <div class="form-group">

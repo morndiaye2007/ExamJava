@@ -127,8 +127,9 @@
                 </div>
                 
                 <div class="form-group">
-                    <label for="matricule">Matricule <span class="required">*</span></label>
-                    <input type="text" id="matricule" name="matricule" required placeholder="Entrez le matricule">
+                    <label for="matricule">Matricule</label>
+                    <input type="text" id="matricule" name="matricule" value="${prochainMatricule}" readonly style="background-color: #f8f9fa; color: #6c757d;">
+                    <small style="color: #6c757d; font-size: 12px;">Le matricule sera généré automatiquement</small>
                 </div>
                 
                 <div class="form-group">
